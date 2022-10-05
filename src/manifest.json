@@ -1,0 +1,13 @@
+{
+  "name": "twitter without recommendations",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "remove unnecessory recommendation",
+  "content_scripts": [{
+    "matches": ["https://twitter.com/*"],
+    "js": [
+      "content.js"
+    ],
+    "run_at": "document_end"
+  }]
+}
