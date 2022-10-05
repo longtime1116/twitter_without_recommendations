@@ -8,11 +8,12 @@ observer.observe(document.getElementsByTagName("body")[0], {
 console.log("----- twitter_without_recommendations loaded -----");
 
 function exec() {
-  // 「#話題を検索」「いまどうしてる？」「おすすめユーザー」を削除
+  // 「#話題を検索」「いまどうしてる？」「おすすめユーザー」「関連性の高いアカウント」を削除
   const labels = [
     "調べたいものを検索",
     "タイムライン: トレンド",
     "おすすめユーザー",
+    "関連性の高いアカウント",
   ];
   labels.forEach(function (l) {
     let e = document.querySelector(`[aria-label="${l}"]`);
