@@ -1,5 +1,6 @@
 window.addEventListener("load", exec, false);
 
+let hoge = 0;
 let observer = new MutationObserver(exec);
 observer.observe(document.getElementsByTagName("body")[0], {
   attributes: true,
@@ -22,4 +23,10 @@ function exec() {
       console.log(`-----  [${l}] removed!!! -----`);
     }
   });
+  // 「おすすめ」と「フォロー中」のタブを削除(後者をクリックしておく)。
+  let tablist = document.querySelector(`[role=tablist]`);
+  if (tablist != null) {
+    tablist.children[1].firstElementChild.click();
+    tablist.remove();
+  }
 }
