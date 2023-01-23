@@ -25,7 +25,7 @@ function exec() {
   });
   // 「おすすめ」と「フォロー中」のタブを削除(後者をクリックしておく)。
   let tablist = document.querySelector(`[role=tablist]`);
-  if (tablist != null) {
+  if (tablist != null && tablist.textContent === "おすすめフォロー中") {
     tablist.children[1].firstElementChild.click();
     tablist.remove();
   }
